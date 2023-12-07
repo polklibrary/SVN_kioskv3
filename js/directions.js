@@ -16,6 +16,11 @@ function ConstructDirectionsEvents(){
 
     // Map floor butttons
     $('#directions .direction-button').on('click', function(){
+
+        
+        _SA(document.location.href, 'VIEW', $.trim($(this).html()));
+
+
         clearTimeout(DIRECTIONS_CLOSE_WAIT_THREAD);
         $(this).addClass('animation-mapflip');
 
