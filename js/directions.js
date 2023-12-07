@@ -18,7 +18,7 @@ function ConstructDirectionsEvents(){
     $('#directions .direction-button').on('click', function(){
 
         
-        _SA(document.location.href, 'VIEW', 'Directions - ' + $.trim($(this).html()));
+        _SA(document.location.href, 'VIEW', 'Directions - ' + $.trim($(this).html().replace('<br/>','')));
 
 
         clearTimeout(DIRECTIONS_CLOSE_WAIT_THREAD);
