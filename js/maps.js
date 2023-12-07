@@ -17,6 +17,9 @@ function ConstructMapEvents(){
 
     // Map floor butttons
     $('#map .map-button').on('click', function(){
+
+        _SA(document.location.href, 'VIEW', 'Map - ' + $.trim($(this).html()));
+
         clearTimeout(MAP_CLOSE_WAIT_THREAD);
         $(this).addClass('animation-mapflip');
 
