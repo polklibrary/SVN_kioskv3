@@ -187,7 +187,7 @@ function ButtonsInitialization(){
         $('#content > div').css('display', 'none');
         $(target).css('display', 'flex');
         ClashCrash(function(){});
-        _SA(document.location.href, 'VIEW', target.replace('#',''));
+        _SA(document.location.href, 'VIEW', $(this).text());
     });
 }
 
