@@ -202,7 +202,7 @@ body {
 }
 
 #content {
-    height: calc(100vh - 230px);
+    height: calc(100vh - 200px - 100px);
     position: relative;
     width: 100vw;
     z-index: 1;
@@ -268,11 +268,11 @@ body {
     width: 600px;
 }
 #hours .hours-list > .info .date .day {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 #hours .hours-list > .info .date .time {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
     margin-left: 20px;
 }
@@ -283,10 +283,10 @@ body {
     width: 650px;
 }
 #hours .hours-list > .info .date:first-child .day {
-    font-size: 48px;
+    font-size: 42px;
 }
 #hours .hours-list > .info .date:first-child .time {
-    font-size: 40px;
+    font-size: 38px;
 }
 
 #hours .hours-list .weather {
@@ -321,7 +321,7 @@ body {
     justify-content: start;
     align-items: start;
     flex-direction: row;
-    max-height: 800px;
+    max-height: 700px;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -406,7 +406,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    height: 800px;
+    height: 700px;
     width: 800px;
 }
 
@@ -419,7 +419,7 @@ body {
     display: flex;
     font-size: 52px;
     font-weight: bold;
-    height: 300px;
+    height: 250px;
     justify-content: center;
     margin: 30px;
     opacity: 1;
@@ -553,7 +553,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    height: 800px;
+    height: 700px;
     width: 1600px;
 }
 
@@ -566,7 +566,7 @@ body {
     display: flex;
     font-size: 24px;
     font-weight: bold;
-    height: 150px;
+    height: 125px;
     justify-content: center;
     margin: 25px;
     opacity: 1;

@@ -1,4 +1,4 @@
-var DIRECTIONS_CLOSE_WAIT_SECONDS = 15;
+var DIRECTIONS_CLOSE_WAIT_SECONDS = 20;
 var DIRECTIONS_CLOSE_WAIT_THREAD = null;
 
 function ConstructDirectionsEvents(){

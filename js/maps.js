@@ -1,4 +1,4 @@
-var MAP_CLOSE_WAIT_SECONDS = 15;
+var MAP_CLOSE_WAIT_SECONDS = 20;
 var MAP_CLOSE_WAIT_THREAD = null;
 
 function ConstructMapEvents(){
