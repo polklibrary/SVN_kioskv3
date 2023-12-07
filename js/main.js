@@ -1,3 +1,26 @@
+/**************************************************
+   ANALYTICS
+***************************************************/
+function _SA(u,a,d){
+    if (typeof window._SA_EXCLUDE_PATHS !== 'undefined')
+    {
+        for (var i in window._SA_EXCLUDE_PATHS)
+        {
+            var t = window._SA_EXCLUDE_PATHS[i];
+            if (u.indexOf(t) != -1 && u.indexOf(d) != -1 )
+                return; // quit
+        }
+    }
+
+    var i = new Image();
+    if (typeof window._SA_PAGE_URL_FN !== 'undefined')
+        u = window._SA_PAGE_URL_FN(u,a,d);
+    if (typeof window._SA_PAGE_ACTION_FN !== 'undefined')
+        a = window._SA_PAGE_ACTION_FN(u,a,d);
+    if (typeof window._SA_PAGE_ACTION_DATA_FN !== 'undefined')
+        d = window._SA_PAGE_ACTION_DATA_FN(u,a,d);
+    i.src = 'https://polk.uwosh.edu/analytics/sa.php?page_url=' + u + '&page_action=' + a + '&page_action_data=' + d;
+}
 
 
 /**************************************************
@@ -123,6 +146,8 @@ function StartAdTimer(){
 
             // Close opened ad
             AdsCloseThread = setTimeout(function(){
+                
+                ButtonWalker();
                 CloseAds();
             }, AdsCloseAfterSeconds*1000);
         //});
@@ -172,10 +197,11 @@ function ButtonsInitialization(){
         $('#content > div').css('display', 'none');
         $(target).css('display', 'flex');
         ClashCrash(function(){});
+        _SA(document.location.href, 'VIEW', target);
     });
 }
 
-function ButtonsNext(){
+function ButtonWalker(){
 
     // FIXED BUTTON ALWAYS 
     //$('#navigation .buttons div[data-content="#directions"]').trigger('click');
@@ -211,9 +237,6 @@ function ButtonsNext(){
     }
 }
 
-
-
-
 /**************************************************
    INITIALIZATIONS
 ***************************************************/
@@ -224,5 +247,5 @@ $(document).ready(function(){
     ButtonsInitialization();
 
     // Which loads first
-    ButtonsNext();
+    ButtonWalker();
 });
