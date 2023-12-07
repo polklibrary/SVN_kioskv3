@@ -2,16 +2,6 @@
    ANALYTICS
 ***************************************************/
 function _SA(u,a,d){
-    if (typeof window._SA_EXCLUDE_PATHS !== 'undefined')
-    {
-        for (var i in window._SA_EXCLUDE_PATHS)
-        {
-            var t = window._SA_EXCLUDE_PATHS[i];
-            if (u.indexOf(t) != -1 && u.indexOf(d) != -1 )
-                return; // quit
-        }
-    }
-
     var i = new Image();
     if (typeof window._SA_PAGE_URL_FN !== 'undefined')
         u = window._SA_PAGE_URL_FN(u,a,d);
@@ -197,7 +187,7 @@ function ButtonsInitialization(){
         $('#content > div').css('display', 'none');
         $(target).css('display', 'flex');
         ClashCrash(function(){});
-        _SA(document.location.href, 'VIEW', target);
+        _SA(document.location.href, 'VIEW', target.replace('#',''));
     });
 }
 
